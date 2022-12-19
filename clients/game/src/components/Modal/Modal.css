@@ -1,0 +1,10 @@
+.textBox{
+    font-size: 30px;
+    width: 350px;
+}
+.btnmodal{
+    margin-left: 180px;
+    padding: 5px 20px 5px 20px;
+    border-radius: 5px;
+    border:none;
+}

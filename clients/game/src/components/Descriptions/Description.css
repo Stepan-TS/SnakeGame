@@ -1,0 +1,15 @@
+.description{
+    display: table-cell;
+    vertical-align: middle;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+.topresults{
+    display: flex;
+    margin-top: 20px;
+}
+.btnresults{
+    margin: 5px 0px 20px 25px;
+    border-radius: 10px;
+    border: none;
+}

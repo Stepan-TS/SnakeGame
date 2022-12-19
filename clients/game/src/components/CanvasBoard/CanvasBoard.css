@@ -1,0 +1,28 @@
+canvas{
+    background-color: white;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.btnstart{
+    background-color: red;
+    border: none;
+    padding: 15px 55px 15px 55px;
+    border-radius: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.pauseResume{
+    margin-top: 15px;
+}
+.btnresume{
+    font-size: 30px;
+    background-color: rgb(185, 146, 204);
+    border: none;
+}
+.btnpause{
+    font-size: 30px;
+    background-color: rgb(185, 146, 204);
+    border: none;
+}

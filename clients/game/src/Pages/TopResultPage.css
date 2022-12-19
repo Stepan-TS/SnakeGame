@@ -1,0 +1,32 @@
+*{
+    margin:0;
+}
+
+.listbox{
+    background-color: rgb(185, 146, 204);
+    height: 100vh;
+    
+}
+.list{
+    margin: 0px 250px 0 250px;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    border-bottom: solid;
+}
+.userName{
+    width: 700px;
+    height: 40px;
+    padding: 15px 15px 0px 15px;
+    font-size: 30px;
+}
+.userPoint{
+    font-size: 30px;
+    padding-top: 20px;
+}
+.submit{
+    position: fixed;
+    bottom: 20px;
+    margin-left: 1000px;
+
+}

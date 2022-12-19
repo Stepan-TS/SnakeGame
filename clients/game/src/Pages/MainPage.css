@@ -1,0 +1,5 @@
+.mainbox{
+    display: flex;
+    background-color: rgb(185, 146, 204);
+    height: 100vh;
+}
