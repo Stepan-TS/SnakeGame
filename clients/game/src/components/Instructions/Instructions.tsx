@@ -1,4 +1,3 @@
-
 export interface IInstructionProps {
     resetBoard: () => void;
     closeModal: () => void;

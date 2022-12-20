@@ -22,7 +22,7 @@ import {
   generateRandomPosition,
   hasSnakeCollided,
   IObjectBody,
-} from "../../Services/services";
+} from "../../Services/Services";
 import ScoreCard from "../ScoreCard/ScoreCard";
 import Modal from "../Modal/Modal";
 import './CanvasBoard.css'
@@ -89,14 +89,9 @@ const CanvasBoard = ({ height, width, user_name}: ICanvasBoard) => {
       if (dx === 0 && dy > 0 && ds !== "DOWN") {
         dispatch(makeMove(dx, dy, MOVE_DOWN,user_points));
       }
-    
-    
   },
     [dispatch, user_points]
-
   );
-
-
   const handleKeyEvents = useCallback(
     (event: KeyboardEvent) => {
       if (disallowedDirection) {
@@ -124,8 +119,6 @@ const CanvasBoard = ({ height, width, user_name}: ICanvasBoard) => {
     moveSnake(20, 0, disallowedDirection); 
   }
  
-
-
   const resetBoard = useCallback(() => {
     window.removeEventListener("keypress", handleKeyEvents);
     dispatch(resetGame());
@@ -134,7 +127,7 @@ const CanvasBoard = ({ height, width, user_name}: ICanvasBoard) => {
     drawObject(context, snake1, "#91C483");
     drawObject(
       context,
-      [generateRandomPosition(width - 40, height - 40)],
+      [generateRandomPosition(width - 20, height - 20)],
       "#676FA3"
     ); //Draws object randomly
     window.addEventListener("keypress", handleKeyEvents);
@@ -143,7 +136,7 @@ const CanvasBoard = ({ height, width, user_name}: ICanvasBoard) => {
   useEffect(() => {
     //Generate new object
     if(isConsumedBlue){
-      const posi = generateRandomPosition(width - 40, height - 40);
+      const posi = generateRandomPosition(width - 20, height - 20);
       setPosBlue(posi)
       setIsConsumedBlue(false);
 
@@ -154,7 +147,7 @@ const CanvasBoard = ({ height, width, user_name}: ICanvasBoard) => {
       dispatch(scoreUpdates(INCREMENT_SCORE_BLUE));
     }
     else if(isConsumedYellow){
-      const posi = generateRandomPosition(width - 40, height - 40);
+      const posi = generateRandomPosition(width - 20, height - 20);
       setPosYellow(posi)
       setIsConsumedYellow(false);
 
@@ -165,7 +158,7 @@ const CanvasBoard = ({ height, width, user_name}: ICanvasBoard) => {
       dispatch(scoreUpdates(INCREMENT_SCORE_YELLOW));
     }
     else if(isConsumedRed){
-      const posi = generateRandomPosition(width - 40, height - 40);
+      const posi = generateRandomPosition(width - 20, height - 20);
       setPosRed(posi)
       setIsConsumedRed(false);
 
@@ -198,10 +191,10 @@ const CanvasBoard = ({ height, width, user_name}: ICanvasBoard) => {
 
     if (
       hasSnakeCollided(snake1, snake1[0]) ||
-      snake1[0].x >= width ||
-      snake1[0].x <= 0 ||
-      snake1[0].y <= 0 ||
-      snake1[0].y >= height
+      snake1[0].x > width ||
+      snake1[0].x < 0 ||
+      snake1[0].y < 0 ||
+      snake1[0].y > height
     ) {
       onSubmitForm()
       setIsOpen(true)
@@ -236,7 +229,6 @@ const Resume = () => {
   if(disallowedDirection === "UP"){
     moveSnake(0, 20, disallowedDirection); 
   }
-
 }
   return (
     <>

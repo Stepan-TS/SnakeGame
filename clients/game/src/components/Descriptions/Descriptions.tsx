@@ -5,7 +5,6 @@ import './Description.css'
 const Description = (props:any) => {
     const[user_name, setUser_Name] = useState("")
     //let user_name:string="";
-    console.log(user_name)
     const navigate = useNavigate();
     
     return(

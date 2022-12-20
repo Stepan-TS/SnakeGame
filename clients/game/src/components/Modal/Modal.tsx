@@ -23,7 +23,6 @@ const OVERLAY_STYLES:any = {
     zIndex:1000
 }
 
-
 export default function Modal({open, children, onClose, resetBoard}:any) {
     const score = useSelector((state: IGlobalState) => state.score);
     if(!open) return null
@@ -37,7 +36,7 @@ export default function Modal({open, children, onClose, resetBoard}:any) {
                     <p>Try again!</p>
                     <Instruction resetBoard={resetBoard} closeModal={onClose}/>
                 </div>
-            </div>
+            </div>z
         </>
     )
 }

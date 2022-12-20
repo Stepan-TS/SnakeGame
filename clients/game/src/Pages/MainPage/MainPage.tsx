@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Description from '../components/Descriptions/Descriptions';
-import Game from '../components/Game/Game';
+import Description from '../../components/Descriptions/Descriptions';
+import Game from '../../components/Game/Game';
 import './MainPage.css'
 
 const MainPage = () => {

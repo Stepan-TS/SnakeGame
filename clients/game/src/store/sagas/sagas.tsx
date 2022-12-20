@@ -1,11 +1,8 @@
-import { useSelector } from "react-redux";
-import { IGlobalState } from "../reduces/reduces";
 import {
     CallEffect,
     delay,
     put,
     PutEffect,
-    takeEvery,
     takeLatest,
   } from "redux-saga/effects";
   import {
@@ -22,7 +19,6 @@ import {
     STOP_GAME,
     UP,
   } from "../actions/actions";
-import ScoreCard from "../../components/ScoreCard/ScoreCard";
   
    
   

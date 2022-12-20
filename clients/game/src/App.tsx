@@ -1,8 +1,7 @@
 import React from 'react';
-import './App.css';
-import MainPage from './Pages/MainPage';
+import MainPage from './Pages/MainPage/MainPage';
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import TopResultPage from './Pages/TopResultPage';
+import TopResultPage from './Pages/TopResultPage/TopResultPage';
 
 function App() {
   return (
